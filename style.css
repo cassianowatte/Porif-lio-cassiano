@@ -156,7 +156,7 @@ body {
   width: 100%;
 }
 
-@media (max-width: 462px) and (min-width: 375px) {
+@media (max-width: 462px) and (min-width: 360px) {
   .logo {
     font-size: 30px;
     padding-bottom: 10px;
