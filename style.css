@@ -163,13 +163,13 @@ body {
   }
   .home {
     display: flex;
+
     justify-content: center;
     align-items: center;
   }
   .home-content h1 {
-    margin: 0;
-    padding: 0;
     font-size: 28px;
+    margin-top: -130px;
   }
   .header {
     display: flex;
@@ -179,11 +179,12 @@ body {
   }
   .navbar a {
     margin: 0;
-    padding: 10px;
+    padding: 5px;
   }
 
   .home-content h3 {
     font-size: 23px;
+    padding-top: 0;
   }
   .btn-box a {
     height: 30px;
@@ -196,5 +197,6 @@ body {
     font-size: 14px;
   }
   .social-icons {
+    margin-bottom: 130px;
   }
 }
