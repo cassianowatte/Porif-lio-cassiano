@@ -186,12 +186,12 @@ body {
   }
   .btn-box a {
     height: 30px;
-    padding: 0 2%;
+
     font-size: 14px;
   }
   .social-icons {
     display: flex;
-    margin: 0 80px;
+    margin: 0 70px;
   }
 }
 @media (max-width: 462px) and (min-width: 377px) {
@@ -224,13 +224,13 @@ body {
   }
   .btn-box a {
     height: 30px;
-    margin-left: 60px;
+    margin-left: 50px;
 
     font-size: 14px;
   }
   .social-icons {
     display: flex;
     flex-direction: row;
-    margin-left: 120px;
+    margin-left: 110px;
   }
 }
