@@ -225,10 +225,12 @@ body {
   .btn-box a {
     height: 30px;
     font-size: 14px;
+    margin-left: 8px;
   }
   .social-icons {
     display: flex;
-    margin-left: 80px;
+    margin-left: 93px;
+
     padding: 2px;
   }
 }
