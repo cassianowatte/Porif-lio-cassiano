@@ -186,15 +186,15 @@ body {
   }
   .btn-box a {
     height: 30px;
+    padding: 0 2%;
     font-size: 14px;
   }
   .social-icons {
     display: flex;
-    margin-left: 80px;
-    padding: 2px;
+    margin: 0 80px;
   }
 }
-@media (max-width: 462px) {
+@media (max-width: 462px) and (min-width: 377px) {
   .logo {
     font-size: 30px;
     padding-bottom: 10px;
@@ -224,13 +224,13 @@ body {
   }
   .btn-box a {
     height: 30px;
+    margin-left: 60px;
+
     font-size: 14px;
-    margin-left: 8px;
   }
   .social-icons {
     display: flex;
-    margin-left: 93px;
-
-    padding: 2px;
+    flex-direction: row;
+    margin-left: 120px;
   }
 }
