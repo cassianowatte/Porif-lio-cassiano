@@ -659,6 +659,7 @@ span {
     }
     .footer p {
       margin-top: 2rem;
+      text-align: center;
     }
   }
 }
@@ -672,5 +673,8 @@ span {
     align-items: center;
     flex-direction: column;
     text-align: center;
+  }
+  .home-content h1 {
+    font-size: 5rem;
   }
 }
