@@ -34,27 +34,32 @@ window.onscroll = () => {
   navBar.classList.remove("active");
 };
 
-function sendEmail(event) {
-  event.preventDefault(); //impede envio padrao de formulário
-  const name = document.querySelector('input[name="nome"]').value;
-  const email = document.querySelector('input[name="email"]').value;
-  const number = document.querySelector('input[name="number"]').value;
-  const subject = document.querySelector('input[name="text"]').value;
+function enviarEmail(event) {
+  event.preventDefault(); // Impede o envio padrão do formulário
 
-  const parameters = {
-    toName: "Seu Nome",
-    fromName: name,
-    fromEmail: email,
-    fromNumber: number,
-    fromSubject: subject,
+  // Obtém os dados do formulário
+  const nome = document.getElementById("nome").value;
+  const email = document.getElementById("email").value;
+  const number = document.getElementById("number").value;
+  const subject = document.getElementById("text").value;
+  const message = document.getElementById("txt-field").value;
+
+  // Configura os parâmetros do email
+  const parametros = {
+    to_name: "Cassiano Watte",
+    from_name: nome,
+    from_email: email,
+    from_number: number,
+    from_subject: subject,
+    message: message,
   };
+
   // Envia o email usando o EmailJS
   emailjs
-    .send("service_adqucdb", "template_m6wsxba", parameters)
+    .send("service_adqucdb", "template_qs4nsvc", parametros)
     .then(function () {
       alert("Email enviado com sucesso!"); // Exibe uma mensagem de sucesso
-      // Redireciona para uma página de confirmação, se desejar
-      window.location.href = "confirmacao.html";
+      // Faça qualquer ação adicional necessária, como redirecionar para uma página de confirmação
     })
     .catch(function (erro) {
       console.error("Erro ao enviar o email:", erro); // Exibe o erro, se ocorrer
@@ -63,3 +68,5 @@ function sendEmail(event) {
       );
     });
 }
+
+document.getElementById("contact-form").addEventListener("submit", enviarEmail);
