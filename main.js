@@ -33,3 +33,33 @@ window.onscroll = () => {
   menuIcon.classList.remove("bx-x");
   navBar.classList.remove("active");
 };
+
+function sendEmail(event) {
+  event.preventDefault(); //impede envio padrao de formulário
+  const name = document.querySelector('input[name="nome"]').value;
+  const email = document.querySelector('input[name="email"]').value;
+  const number = document.querySelector('input[name="number"]').value;
+  const subject = document.querySelector('input[name="text"]').value;
+
+  const parameters = {
+    toName: "Seu Nome",
+    fromName: name,
+    fromEmail: email,
+    fromNumber: number,
+    fromSubject: subject,
+  };
+  // Envia o email usando o EmailJS
+  emailjs
+    .send("service_adqucdb", "template_m6wsxba", parameters)
+    .then(function () {
+      alert("Email enviado com sucesso!"); // Exibe uma mensagem de sucesso
+      // Redireciona para uma página de confirmação, se desejar
+      window.location.href = "confirmacao.html";
+    })
+    .catch(function (erro) {
+      console.error("Erro ao enviar o email:", erro); // Exibe o erro, se ocorrer
+      alert(
+        "Ocorreu um erro ao enviar o email. Por favor, tente novamente mais tarde."
+      );
+    });
+}
