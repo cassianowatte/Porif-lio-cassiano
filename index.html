@@ -26,8 +26,9 @@
       <nav class="navbar">
         <a href="#home" class="active">Início</a>
         <a href="#about">Sobre</a>
-        <a href="#skills">Skills</a>
         <a href="#education">Carreira</a>
+        <a href="#skills">Skills</a>
+
         <a href="#contact">Contato</a>
 
         <span class="active-nav"></span>
@@ -245,25 +246,40 @@
     <section class="contact" id="contact">
       <h2 class="heading">Fale <span>Comigo!</span></h2>
 
-      <form action="#">
+      <form onsubmit="sendEmail(event)">
         <div class="input-box">
           <div class="input-field">
-            <input type="text" placeholder="Nome Completo" required />
+            <input
+              type="text"
+              name="nome"
+              placeholder="Nome Completo"
+              required
+            />
             <span class="focus"></span>
           </div>
           <div class="input-field">
-            <input type="text" placeholder="Email" required />
+            <input type="email" name="email" placeholder="Email" required />
             <span class="focus"></span>
           </div>
         </div>
 
         <div class="input-box">
           <div class="input-field">
-            <input type="number" placeholder="Telefone" required />
+            <input
+              type="number"
+              name="number"
+              placeholder="Telefone"
+              required
+            />
             <span class="focus"></span>
           </div>
           <div class="input-field">
-            <input type="text" placeholder="Assunto do Email" required />
+            <input
+              type="text"
+              name="text"
+              placeholder="Assunto do Email"
+              required
+            />
             <span class="focus"></span>
           </div>
         </div>
@@ -297,5 +313,11 @@
     </footer>
 
     <script src="./main.js"></script>
+    <script src="https://cdn.emailjs.com/sdk/2.6.4/email.min.js"></script>
+    <script>
+      (function () {
+        emailjs.init("service_adqucdb");
+      })();
+    </script>
   </body>
 </html>
