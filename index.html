@@ -246,11 +246,12 @@
     <section class="contact" id="contact">
       <h2 class="heading">Fale <span>Comigo!</span></h2>
 
-      <form onsubmit="sendEmail(event)">
+      <form id="contact-form">
         <div class="input-box">
           <div class="input-field">
             <input
               type="text"
+              id="nome"
               name="nome"
               placeholder="Nome Completo"
               required
@@ -258,7 +259,13 @@
             <span class="focus"></span>
           </div>
           <div class="input-field">
-            <input type="email" name="email" placeholder="Email" required />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email"
+              required
+            />
             <span class="focus"></span>
           </div>
         </div>
@@ -267,6 +274,7 @@
           <div class="input-field">
             <input
               type="number"
+              id="number"
               name="number"
               placeholder="Telefone"
               required
@@ -276,6 +284,7 @@
           <div class="input-field">
             <input
               type="text"
+              id="text"
               name="text"
               placeholder="Assunto do Email"
               required
@@ -287,7 +296,7 @@
         <div class="textarea-field">
           <textarea
             name=""
-            id=""
+            id="txt-field"
             cols="30"
             rows="10"
             placeholder="Digite aqui sua Mensagem!"
@@ -297,7 +306,7 @@
         </div>
 
         <div class="btn-box btns">
-          <button type="submit" class="btn">Enviar</button>
+          <button type="submit" id="btn" class="btn">Enviar</button>
         </div>
       </form>
     </section>
@@ -313,11 +322,16 @@
     </footer>
 
     <script src="./main.js"></script>
-    <script src="https://cdn.emailjs.com/sdk/2.6.4/email.min.js"></script>
-    <script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
       (function () {
-        emailjs.init("service_adqucdb");
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init("QgiYkvQjdBdYjpPGL");
       })();
     </script>
+    <script></script>
   </body>
 </html>
