@@ -466,6 +466,13 @@ span {
   width: 91%;
 }
 
+.certify div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
 .contact {
   min-height: auto;
   padding-bottom: 7rem;
@@ -681,6 +688,13 @@ span {
       margin-top: 2rem;
       text-align: center;
     }
+  }
+  .certify img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
   }
 }
 
