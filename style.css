@@ -603,6 +603,13 @@ span {
   .footer {
     padding: 2rem 4%;
   }
+  .certify img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+  }
 }
 @media (max-width: 768px) {
   .header {
@@ -655,6 +662,13 @@ span {
     transform: translateX(0);
     transition-delay: 0.25s;
   }
+  .certify img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+  }
 
   @media (max-width: 520px) {
     html {
@@ -669,6 +683,13 @@ span {
     }
     .social-icons a {
       width: 38px;
+    }
+    .certify img {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      width: 100%;
     }
   }
   @media (max-width: 462px) {
@@ -710,6 +731,13 @@ span {
   }
   .home-content h1 {
     font-size: 5rem;
+  }
+  .certify img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
   }
 }
 
